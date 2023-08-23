@@ -14,3 +14,7 @@ cdk.context.json
 
 # coverage
 /test/**/TestResults
+
+# .NET Core build folders
+bin/
+obj/
