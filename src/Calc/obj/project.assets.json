@@ -1,0 +1,67 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net7.0": []
+  },
+  "packageFolders": {
+    "/Users/antonganhammar/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/antonganhammar/Documents/Dev/Private/coverage-lcov/src/Calc/Calc.csproj",
+      "projectName": "Calc",
+      "projectPath": "/Users/antonganhammar/Documents/Dev/Private/coverage-lcov/src/Calc/Calc.csproj",
+      "packagesPath": "/Users/antonganhammar/.nuget/packages/",
+      "outputPath": "/Users/antonganhammar/Documents/Dev/Private/coverage-lcov/src/Calc/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/antonganhammar/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/polestar-dev-house/auth/77784008-7d7f-42cc-a01a-8d22e453f13f/api/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

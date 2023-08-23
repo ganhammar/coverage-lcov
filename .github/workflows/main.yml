@@ -16,18 +16,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install node
-        uses: actions/setup-node@v3
+      - name: Setup .NET Core SDKs
+        uses: actions/setup-dotnet@v3
         with:
-          node-version: 18
-      - name: Restore
-        run: npm ci
-      - name: Test
-        run: npm run coverage
+          dotnet-version: 7.0.x
+
+      - name: 'Backend: Restore'
+        run: dotnet restore
+      - name: 'Backend: Build'
+        run: dotnet build --no-restore
+      - name: 'Backend: Test'
+        run: dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
 
       - name: Publish Code Coverage
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage/lcov.info
+          files: test/**/*/TestResults/coverage.info
           fail_ci_if_error: false
+          gcov_ignore: test/**/*
