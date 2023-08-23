@@ -1,0 +1,1 @@
+export default (allGood) => allGood ? 'All good' : 'Not good';
