@@ -28,6 +28,8 @@ jobs:
       - name: 'Backend: Test'
         run: dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
 
+      - run: lcov -a test/CalcTests/TestResults/coverage.info -o .coverage-report/merged.info
+
       - name: Publish Code Coverage
         uses: codecov/codecov-action@v3
         with:
